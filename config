@@ -54,7 +54,7 @@ bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 13; exec --no
 bindsym $mod+F2 exec chromium
 bindsym $mod+F3 exec dolphin --platformtheme qt5ct
 #bindsym $mod+F4 exec octave --force-gui
-bindsym $mod+Ctrl+e exec --no-startup-id /home/pijus/.config/i3/emoji_script/./emoji_script.sh 
+bindsym $mod+Ctrl+e exec --no-startup-id $HOME/.config/dwm/autostart/./emoji_script.sh 
 bindsym Print exec --no-startup-id spectacle --platformtheme qt5ct
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
@@ -194,7 +194,6 @@ bindsym $mod+Ctrl+Mod2+KP_6 move container to workspace $ws6
 bindsym $mod+Ctrl+Mod2+KP_7 move container to workspace $ws7
 bindsym $mod+Ctrl+Mod2+KP_8 move container to workspace $ws8
 
-
 # Move to workspace with focused container
 bindsym $mod+Shift+Mod2+KP_End move container to workspace $ws1; workspace $ws1
 bindsym $mod+Shift+Mod2+KP_Down move container to workspace $ws2; workspace $ws2
@@ -297,7 +296,7 @@ exec --no-startup-id dunst
 exec --no-startup-id compton
 exec --no-startup-id xautolock -time 10 -locker 'i3lock -i Pictures/wallpapers/bsod.png -u'
 exec --no-startup-id xfce4-power-manager
-exec_always --no-startup-id /home/pijus/.config/i3/Alternative/alternating_layouts.py
+exec_always --no-startup-id $HOME/.config/i3/Alternative/alternating_layouts.py
 exec_always --no-startup-id xinput --set-prop "Elan Touchpad" "libinput Natural Scrolling Enabled" 1 # reverse scrolling
 exec_always --no-startup-id xinput --set-prop "Elan Touchpad" "libinput Tapping Enabled" 1 #tap clicking
 exec --no-startup-id "/usr/bin/android-messages-desktop "
@@ -338,7 +337,7 @@ set_from_resource $term_color15    color15
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 bar {
 	i3bar_command i3bar
-	status_command  i3blocks -c /home/pijus/.config/i3blocks/config
+	status_command  i3blocks -c $HOME/.config/i3blocks/config
 	 position bottom
 	## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
 	# tray_output primary
